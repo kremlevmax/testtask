@@ -1,0 +1,14 @@
+{
+  "name": "testtask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "d3-interpolate": "^3.0.1",
+    "d3-random": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "d3-scale-chromatic": "^3.0.0",
+    "d3-selection": "^3.0.0",
+    "parcel": "^2.5.0"
+  }
+}

@@ -1,0 +1,46 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .mz-chart {
+    background-color: #eeeeee;
+    font-family: "Graphik LC", sans-serif;
+  }
+
+  .mz-chart__header {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  .mz-chart__description {
+    font-size: 11px;
+    opacity: 0.5;
+  }
+
+  .mz-chart__tooltip {
+    z-index: 999;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.26);
+    box-sizing: border-box;
+    min-height: 50px;
+    min-width: 200px;
+    padding: 15px 20px 15px 20px;
+    pointer-events: auto;
+    max-width: 280px;
+    font-family: "Graphik LC", sans-serif;
+  }
+
+  .mz-chart__tooltip-header {
+    font-weight: 700;
+  }
+</style>
+<div class="mz-publish-photo mz-publish-photo_bigger">
+  <svg class="mz-chart" viewBox="0 0 960 660">
+    <text class="mz-chart__description"  x="30" y="640">Источник: Официальный интернет-портал в ад</text>
+  </svg>
+  <div class="mz-chart__tooltip">
+    <p class="mz-chart__tooltip-header"></p>
+    <p class="mz-chart__tooltip-value"></p>
+  </div>
+</div>
+<script src="index.js" type="module"></script>
