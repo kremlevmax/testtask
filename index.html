@@ -1,5 +1,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  .mz-publish-photo {
+    max-width: 960px;
+  }
+
   .mz-chart {
     background-color: #eeeeee;
     font-family: "Graphik LC", sans-serif;
@@ -16,31 +20,60 @@
   }
 
   .mz-chart__tooltip {
-    z-index: 999;
-    display: none;
-    position: absolute;
     background-color: #fff;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.26);
     box-sizing: border-box;
+    display: none;
+    font-family: "Graphik LC", sans-serif;
+    max-width: 280px;
     min-height: 50px;
-    min-width: 200px;
+    /* min-width: 200px; */
     padding: 15px 20px 15px 20px;
     pointer-events: auto;
-    max-width: 280px;
-    font-family: "Graphik LC", sans-serif;
+    position: absolute;
+    width: auto;
+    z-index: 999;
   }
 
   .mz-chart__tooltip-header {
     font-weight: 700;
+    max-width: 280px;
+    text-align: center;
+    width: fit-content;
+  }
+
+  .mz-chart__tooltip-value {
+    text-align: center;
+  }
+
+  .mz-button {
+    background: black;
+    color: #eeeeee;
+    font-family: "Graphik LC", sans-serif;
+    font-weight: 600;
+    height: 50px;
+    max-width: 280px;
+    width: 200px;
+
+  }
+
+  .mz-button:hover {
+    background: rgba(0, 0, 0, 0.928);
+  }
+
+  .mz-button:active {
+    background: #fff;
+    color: black;
   }
 </style>
 <div class="mz-publish-photo mz-publish-photo_bigger">
   <svg class="mz-chart" viewBox="0 0 960 660">
-    <text class="mz-chart__description"  x="30" y="640">Источник: Официальный интернет-портал в ад</text>
+    <text class="mz-chart__description" x="30" y="640">Источник: Официальный интернет-портал в ад</text>
   </svg>
   <div class="mz-chart__tooltip">
     <p class="mz-chart__tooltip-header"></p>
     <p class="mz-chart__tooltip-value"></p>
   </div>
+  <button class="mz-button" id="restart">Еще</button>
 </div>
 <script src="index.js" type="module"></script>
