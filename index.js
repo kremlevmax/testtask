@@ -165,4 +165,3 @@ function updateChart() {
     .attr("stroke-dasharray", "15, 5");
 }
 d3.select(".mz-button").on("click", updateChart);
-//Done
