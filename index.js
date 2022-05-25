@@ -41,6 +41,7 @@ let data = months.map((m) => ({
   label: m,
   value: randomValue(),
 }));
+let values = data.map((m) => m.value);
 
 const yScale = scaleLinear().domain([0, 100]).range([0, height]);
 const colorScale = scaleLinear().domain([0, 100]).range(["#d22626", "#086cdc"]);
@@ -106,6 +107,16 @@ chartbars
   .duration(500)
   .attr("y", (d, i) => height - yScale(d.value))
   .attr("height", (d, i) => yScale(d.value));
+
+$chartContainer
+  .append("line")
+  .attr("x1", 0)
+  .attr("y1", height - yScale(d3.median(values)))
+  .attr("x2", width)
+  .attr("y2", height - yScale(d3.median(values)))
+  .attr("stroke", "orange")
+  .attr("stroke-width", "4")
+  .attr("stroke-dasharray", "15, 5");
 
 function updateChart() {
   $chartContainer.select("line").remove();
